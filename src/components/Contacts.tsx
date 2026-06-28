@@ -15,7 +15,7 @@ function Contacts(){
                     <a href="mailto:inna6903zaharova@yandex.ru" className="contacts__button contacts__button--primary">
                         Написать мне
                     </a>
-                    <a href="#" target="_blank" rel="noreferrer" className="contacts__button">
+                    <a href="https://github.com/user49324809/frontend-portfolio" target="_blank" rel="noreferrer" className="contacts__button">
                         GitHub
                     </a>
                 </div>
