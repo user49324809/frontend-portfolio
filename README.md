@@ -1,32 +1,39 @@
-# React + TypeScript + Vite
+# Frontend Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Персональное портфолио frontend-разработчика Натальи: краткая информация, выбранные проекты, навыки и контакты.
 
-Currently, two official plugins are available:
+**[Открыть сайт](https://frontend-portfolio-virid-sigma.vercel.app)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Что реализовано
 
-## React Compiler
+- адаптивная одностраничная верстка;
+- навигация по разделам страницы;
+- карточки реальных проектов со ссылками на код и демо;
+- компоненты на React с типизацией TypeScript;
+- стили на SCSS с BEM-именованием.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Стек
 
-## Expanding the Oxlint configuration
+React 19, TypeScript, Vite, SCSS, Oxlint.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Локальный запуск
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+git clone https://github.com/user49324809/frontend-portfolio.git
+cd frontend-portfolio
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Проверка проекта
+
+```bash
+npm run lint
+npm run build
+```
+
+## Проекты в портфолио
+
+- [Трекер расходов](https://github.com/user49324809/tracker) — React-приложение с фильтрацией, диаграммами и localStorage. [Демо](https://user49324809.github.io/tracker/)
+- [Интеграция отзывов Яндекса](https://github.com/user49324809/yandex_integrations) — full-stack проект на Laravel, Vue 3 и Inertia; внешний источник данных представлен mock-провайдером.
+- [Короткие ссылки и QR-коды](https://github.com/user49324809/shortlink) — backend-приложение на Yii2 с MySQL и Docker.
