@@ -4,7 +4,7 @@ type SkillGroup = {
     skills: string[]
 }
 
-const SkillGroups: SkillGroup[] = [
+const skillGroups: SkillGroup[] = [
     {
         id: 1,
         title: 'Основные технологии',
@@ -23,7 +23,7 @@ const SkillGroups: SkillGroup[] = [
     {
         id: 4,
         title: 'Инструменты',
-        skills: ['Git', 'GitHub', 'Vite', 'npm', 'figma'],
+        skills: ['Git', 'GitHub', 'Vite', 'npm', 'Figma'],
     },
 ]
 
@@ -35,8 +35,8 @@ function Skills(){
                 <h2 className="skills__title">
                     Технологии, которые я использую в разработке
                 </h2>
-                <div className="skills_grid">
-                    {SkillGroups.map((group) => (
+                <div className="skills__grid">
+                    {skillGroups.map((group) => (
                         <article className="skill-group" key={group.id}>
                             <h3 className="skill-group__title">{group.title}</h3>
                             <ul className="skill-group__list">
