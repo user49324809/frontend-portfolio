@@ -4,29 +4,35 @@ type Project = {
     description: string
     stack: string[]
     status: string
+    sourceUrl: string
+    demoUrl?: string
 }
 
 const projects: Project[] = [
     {
         id: 1,
-        title: 'Менеджер задач на Vue',
-        description: 'Приложение для создания и выполнения задач с сохранением в localStorage',
-        stack: ['Vue3', 'TypeScript', 'Pinia', 'SCSS'],
-        status: 'Готовится к публикации'
+        title: 'Трекер расходов',
+        description: 'Приложение для учёта расходов с фильтрацией, диаграммами и сохранением данных в браузере.',
+        stack: ['React', 'JavaScript', 'Chart.js', 'localStorage'],
+        status: 'Опубликован',
+        sourceUrl: 'https://github.com/user49324809/tracker',
+        demoUrl: 'https://user49324809.github.io/tracker/',
     },
     {
         id: 2,
-        title: 'Менеджер задач на React',
-        description: 'Приложение с регистрацией, авторизацией и уапрвления личными задачами',
-        stack: ['React', 'JavaScript', 'RestApi', 'MongoDB'],
-        status: 'Готовится к публикации'
+        title: 'Интеграция отзывов Яндекса',
+        description: 'Full-stack интерфейс для подключения компании и просмотра рейтинга и отзывов. Для демонстрации используется mock-провайдер данных.',
+        stack: ['Laravel', 'Vue 3', 'Inertia', 'MySQL'],
+        status: 'Full-stack · mock data',
+        sourceUrl: 'https://github.com/user49324809/yandex_integrations',
     },
     {
         id: 3,
-        title: 'Панель отзывов',
-        description: 'Интерфейс для отображения рейтинга компании и списка отзывов пользователей',
-        stack: ['Vue3', 'Axios', 'Inertia', 'Tailwind CSS'],
-        status: 'Готовится к публикации'
+        title: 'Короткие ссылки и QR-коды',
+        description: 'Сервис сокращения ссылок с генерацией QR-кодов, статистикой переходов и Docker-окружением.',
+        stack: ['PHP', 'Yii2', 'MySQL', 'Docker'],
+        status: 'Backend-проект',
+        sourceUrl: 'https://github.com/user49324809/shortlink',
     },
 ]
 
@@ -35,7 +41,7 @@ function Projects(){
         <section className="projects" id="projects">
             <div className="container">
                 <p className="section-label">Проекты</p>
-                <h2 className="project__title">Приложения, над которыми я работала</h2>
+                <h2 className="projects__title">Приложения, над которыми я работала</h2>
                 <div className="projects__grid">
                     {projects.map((project) =>(
                         <article className="project-card" key={project.id}>
@@ -49,6 +55,16 @@ function Projects(){
                                     <li key={technology}>{technology}</li>
                                 ))}
                             </ul>
+                            <div className="project-card__links">
+                                {project.demoUrl && (
+                                    <a href={project.demoUrl} target="_blank" rel="noreferrer">
+                                        Демо
+                                    </a>
+                                )}
+                                <a href={project.sourceUrl} target="_blank" rel="noreferrer">
+                                    Код на GitHub
+                                </a>
+                            </div>
                         </article>
                     ))}
                 </div>
