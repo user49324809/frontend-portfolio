@@ -93,7 +93,7 @@
   }
 }
 
-.projects{
+.projects {
   padding: 110px 0;
   border-top: 1px solid rgba(148, 163, 184, 0.15);
     &__title {
@@ -103,14 +103,14 @@
       line-height: 1.15;
     }
 
-    &_grid{
+    &__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
 }
 
-.project-card{
+.project-card {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
@@ -119,12 +119,11 @@
   border: 1px solid rgba(148, 163, 184, 0.2);
   border-radius: 18px;
   background-color: rgba(30, 41, 59, 0.65);
-  transition: transform 0.2 ease border-color 0.2 ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 
   &:hover{
     transform: translateY(-5px);
     border-color: #7c3aed;
-    cursor: pointer;
   }
 
   &__status{
@@ -152,6 +151,28 @@
     margin: auto 0 0;
     padding: 0;
     list-style: none;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+
+    a {
+      padding: 10px 14px;
+      border: 1px solid rgba(167, 139, 250, 0.45);
+      border-radius: 9px;
+      color: #ddd6fe;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        border-color: #a78bfa;
+        background-color: rgba(124, 58, 237, 0.2);
+      }
+    }
   }
 
   li{
@@ -252,7 +273,7 @@
     color: #ddd6fe;
     font-weight: 700;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease; // Исправлено: добавлено 's'
+    transition: background-color 0.2s ease, transform 0.2s ease;
 
     &:hover {
       background-color: rgba(124, 58, 237, 0.2);
@@ -363,25 +384,25 @@
   letter-spacing: 2px;
 }
 
-.about{
+.about {
   padding: 110px 0;
   border-top: 1px solid rgba(148, 163, 184, 0.15);
   background-color: rgba(15, 23, 42, 0.65);
-  &_container{
+  &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 70px;
     align-items: start;
   }
 
-  &_title{
+  &__title {
     max-width: 520px;
     margin: 0;
     font-size: clamp(35px, 5vw, 52px);
     line-height: 1.15;
   }
 
-  &_content{
+  &__content {
     color: #cbd5e1;
     font-size: 18px;
     line-height: 1.8;
@@ -395,6 +416,5 @@
     margin-bottom: 0;
   }
 }
-
 
 
