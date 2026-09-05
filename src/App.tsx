@@ -8,12 +8,12 @@ function App() {
     <div className='portfolio'>
       <header className="header">
         <div className="container header__container">
-          <a href="#" className="header__logo">
+          <a href="#about" className="header__logo">
             Natalia
           </a>
           <nav className="header__nav" aria-label='Основная навигация'>
             <a href="#about">About me</a>
-            <a href="#projects">Project</a>
+            <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#contacts">Contacts</a>
           </nav>
@@ -25,7 +25,7 @@ function App() {
             <p className="hero__label">Frontend developer</p>
             <h1 className="hero__title">Создаю удобные и современные веб-интерфейсы</h1>
             <p className="hero__description">
-              Разрабатываю приложения на React, Vue, работаю с TypeScript, RESTAPI,
+              Разрабатываю приложения на React и Vue, работаю с TypeScript, REST API,
               формами, маршрутизацией и управлением состоянием.
             </p>
             <a href="#projects" className='hero__button'>Посмотреть проекты</a>
@@ -39,7 +39,7 @@ function App() {
             </div>
             <div className="about__content">
               <p>
-                Я frontend-разработчик. Создаю веб приложения на React, Vue, работаю с TypeScript, REST API,
+                Я frontend-разработчик. Создаю веб-приложения на React и Vue, работаю с TypeScript, REST API,
                 формами, маршрутизацией и управлением состоянием.
               </p>
               <p>
